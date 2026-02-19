@@ -15,7 +15,7 @@ stack: EJS, CSS, JavaScript, Node.js, Express, MongoDB, Mapbox
 website: https://pueblosmagicos.onrender.com/
 github:
   label: "View on GitHub"
-  url: https://github.com/Salgado3/Pueblos
+  url: https://github.com/Jaime-Codes/Pueblos
 ---
 
 ### Los Pueblos Mágicos de México
