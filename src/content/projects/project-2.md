@@ -11,7 +11,7 @@ worksImage2:
   url: "/queridoPueblo_map.png"
   alt: "View of the interface of querido pueblos website. showing a map of Mexico and navigation bar on the left"
 platform: Web
-stack: next.js, supabase, cloudinary, Typescript, React, cloudflare, tanstack query
+stack: next.js, supabase, cloudinary, Typescript, React, cloudflare, tanstack query, resend
 website: https://queridopueblo.net
 ---
 
@@ -20,5 +20,3 @@ homemade food and winding markets or the people hanging out in the town
 square. My hope is that this site will inspire you to plan that trip
 you&apos;ve been holding off on, pack your bags, and add the next
 chapter to your story...
-
-WIP, domain bought. currently setting up SMTP. Check out the github in the meantime.
