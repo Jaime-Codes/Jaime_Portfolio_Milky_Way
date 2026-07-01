@@ -1,18 +1,21 @@
 ---
-import { getCollection } from "astro:content";
+// 1. Added "render" to the import statement
+import { getCollection, render } from "astro:content";
 import MarkdownWorksLayout from "../../layouts/MarkdownWorksLayout.astro";
 
 export const prerender = true;
+
 export async function getStaticPaths() {
   const projectEntries = await getCollection("projects");
   return projectEntries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id }, // Correctly map entry.id to match a [slug].astro filename
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+// 2. Replaced the old entry.render() syntax with the standalone render() helper
+const { Content } = await render(entry);
 ---
 
 <MarkdownWorksLayout frontmatter={entry.data}>

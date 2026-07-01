@@ -1,7 +1,14 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
+// Import the built-in glob loader for Markdown/MDX files
+import { glob } from "astro/loaders";
 
 const projectsCollection = defineCollection({
-  type: "content",
+  // 1. Replaced type: "content" with the modern glob loader
+  loader: glob({
+    pattern: "**/[^_]*.{md,mdx}",
+    base: "./src/content/projects",
+  }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
